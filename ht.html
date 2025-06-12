@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profil Keren Saya</title>
+  <style>
+    :root {
+      --primary: #6a11cb;
+      --secondary: #2575fc;
+      --text: #333;
+      --bg: #f9f9f9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header button {
+      background: white;
+      color: var(--primary);
+      border: none;
+      margin: 0 10px;
+      padding: 10px 18px;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    header button:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .section {
+      display: none;
+      padding: 50px 20px;
+      animation: fade 0.4s ease-in-out;
+      text-align: center;
+    }
+
+    .active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .foto-profil {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 25px auto;
+      border: 5px solid var(--primary);
+      box-shadow: 0 0 15px rgba(106, 17, 203, 0.4);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .songs {
+      font-size: 18px;
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+    }
+
+    .songs li {
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-wrap: wrap;
+      }
+
+      header button {
+        margin: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <button onclick="showSection('home')">Home</button>
+  <button onclick="showSection('about')">About Me</button>
+  <button onclick="showSection('gallery')">Gallery</button>
+  <button onclick="showSection('songs')">Favorite Song</button>
+  <button onclick="showSection('contact')">Contact Me</button>
+</header>
+
+<div id="home" class="section active">
+  <h2>Welcome to My Profile</h2>
+  <img src="d:\New folder (2)\foto2.jpeg.jpeg" alt="Foto Profil" class="foto-profil">
+  <p>Hello! welcome to my profile website 😎</p>
+</div>
+
+<div id="about" class="section">
+  <h2>About Me</h2>
+  <img src="c:\Users\User\Downloads\WhatsApp Image 2025-06-12 at 00.00.06.jpeg" alt="Foto Profil" class="foto-profil">
+  <p>  hello everyone, let me introduce myself; my name is Kristian Guruh Imanta Ginting. I come from the city of Medan. and I come from the Karo tribe.
+     My educational background is, I was in kindergarten at Gloria, I was in elementary school at SD Negeri 064033, I was in junior high school at Putri Sion,
+     and high school at ST.PETRUS Medan. and now I am continuing my studies at STMIK TIME campus, majoring in INFORMATION SYSTEMS. the courses that I really like in my major are UI/UX and those that are about design.
+
+and I also have hobbies such as: playing guitar, futsal, and fishing.
+
+   another thing that I also like is discussing, creating, and studying about business.
+ because of business, I have liked it since I was in junior high school. therefore, I have a dream of making my own application, designing my own application.
+  where, in the application will sell the products that I have later, such as food or goods.
+
+  I have 2 life mottos, namely:
+Keep trying, even though the situation is getting more difficult &
+Anyone can be anything.
+
+my favorite food is: noodles, fried rice and meatballs.
+my favorite drink: avocado juice, cold sweet tea.
+my favorite color is: black & brown
+my favorite animal: cat & dog</p>
+</div>
+
+<div id="gallery" class="section">
+  <h2>My Gallery</h2>
+  <div class="gallery">
+    <img src="d:\New folder (2)\fotoku.jpg (2).jpeg" alt="Foto 1">
+    <img src="foto2.jpg" alt="Foto 2">
+    <img src="d:\New folder (2)\fotoku.jpg.jpeg" alt="Foto 3">
+    <img src="d:\New folder (2)\foto3.jpg.jpeg" alt="Foto 4">
+    <img src="foto5.jpg" alt="Foto 5">
+    <img src="foto6.jpg" alt="Foto 6">
+  </div>
+</div>
+
+<div id="songs" class="section">
+  <h2>Favorite Songs</h2>
+  <ul class="songs">
+    <li>🎵 <strong>Pretty</strong> — JVKE</li>
+    <li>🎶 <strong>Somebody Pleasure</strong> — AZIZ HEDRA</li>
+  </ul>
+</div>
+
+<div id="contact" class="section">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:emailkamu@example.com">kristianimanta9@gmail.com</a></p>
+</div>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('.section').forEach(section => {
+      section.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
